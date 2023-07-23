@@ -1,0 +1,224 @@
+﻿:root {
+    --mainBackColor: #f2f2f2;
+    --deepBlue: #73a2d2;
+    --deepBlueHover: #658eb8;
+    --lightBlue: #d1e8ff;
+    --borderRadius: 15px;
+    --blackColor:black;
+}
+body {
+    direction: rtl;
+    background-color: var(--mainBackColor);
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+#container {
+    margin: 2em;
+    position: relative;
+}
+
+#MainTitle {
+    background-color: var(--lightBlue);
+    border-radius: var(--borderRadius);
+    padding: 1.1em 1.25em;
+}
+#MainTitle h1{
+    margin:0px;
+    margin-bottom: 0.2em;
+}
+    #MainTitle a {
+        color: #95a4b3;
+        text-decoration:none;
+    }
+#MainTitle a:-webkit-any-link:hover{
+    color:var(--blackColor);
+    text-decoration:underline;
+}
+
+#MainTitle div a:not(:last-child):after {
+    content: "/";
+}
+
+.akordionGroup {
+    background-color: var(--lightBlue);
+    border-radius: var(--borderRadius);
+}
+
+.akordionGroup.hide{
+    background-color:transparent;
+}
+
+.akordionGroup h2 {
+    background-color: var(--deepBlue);
+    border-radius: var(--borderRadius);
+    display: flex;
+    justify-content: center;
+    color: var(--mainBackColor);
+    padding: 0.7em;
+}
+
+.akordionGroup h2:hover {
+    background-color: var(--deepBlueHover);
+}
+
+    .akordionGroup h2::after {
+        content: "";
+        background-image: url('../Img/DropDownArrow.png');
+        height: 10px;
+        width: 30px;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0.4em;
+        background-size: contain;
+    }
+    .akordionGroup div {
+        padding: 0em 2em;
+        margin-bottom: 1em;
+        overflow:hidden;
+    }
+    .akordionGroup.hide div {
+        height: 0px;
+    }
+
+.TwoSides {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ContainSwitshButtons {
+    display: flex;
+    justify-content: space-around;
+    width: clamp(1px,95%,1200px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.ContainSwitshButtons img {
+    width: 30%;
+}
+
+.ContainSwitshButtons img:hover{
+    filter: grayscale(0.5);
+}
+
+.offMode {
+    filter: grayscale(1);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+/*    background-color: var(--BrightColor);
+    border-color: var(--DarkColor);
+    color: var(--DarkColor);*/
+    transform: scale(1.05) rotate(-3deg);
+}
+
+.btn-primary, .btn-secondary {
+    border-radius: 5px;
+    background-color: var(--mainBackColor);
+    color: var(--blackColor);
+    border: 2px solid var(--blackColor);
+    box-shadow: 2px 2px 0px var(--blackColor);
+    transition: transform 250ms;
+    padding: 0.4em;
+    display: block;
+    margin: auto;
+    z-index: 3;
+    position:relative;
+    text-align: center;
+}
+
+#TempWhileLock img:not(.hidden) {
+    width: min(100%,900px);
+    margin: auto;
+    display:block;
+}
+
+#SoundInteractiveButtton {
+    width: 14.2%;
+    height: 2.8%;
+    right: 73.2%;
+    top: 28.5%;
+}
+
+.newButton {
+    background-color: #f2cd93;
+    border-radius: 3px;
+    box-shadow: black 2px 2px;
+    border: solid black 1.5px;
+}
+
+.ElementOnGinially {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+}
+
+#Sentence {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: larger;
+    display: inline-block;
+}
+
+#mainInteraction {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Frame {
+    position: relative;
+    top: 34%;
+    padding: 20px;
+    width: clamp(1px,60%,1100px);
+    background-color: #ffe4be;
+    Z-INDEX: 3;
+    MARGIN: AUTO;
+}
+
+#Sentence button {
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.Word:hover.Clickable, .Word:focus-visible.Clickable {
+    color: #dd7125;
+}
+
+.Word:not(:hover):not(.Selected) .TempChar {
+    color: transparent;
+}
+
+.Selected {
+    color: #00B9FA;
+}
+
+.CoolBut {
+    box-shadow: black 2px 2px;
+    border: 2px black solid;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+    .CoolBut:hover {
+        transform: rotate(-2deg) scale(1.1);
+    }
+
+#InteractivePageSolo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
