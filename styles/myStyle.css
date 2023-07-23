@@ -182,6 +182,7 @@ body {
     background-color: #ffe4be;
     Z-INDEX: 3;
     MARGIN: AUTO;
+    pointer-events: all;
 }
 
 #Sentence button {
@@ -221,5 +222,6 @@ body {
     width: 100%;
     position: absolute;
     top: 0px;
+    pointer-events: none;
 }
 
